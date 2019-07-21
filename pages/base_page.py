@@ -1,5 +1,4 @@
- class BasePage(object): 
-	"""docstring for BasePage"""
+class BasePage(object):
 	def __init__(self, browser, url):
 		self.browser = browser
 		self.url = url
