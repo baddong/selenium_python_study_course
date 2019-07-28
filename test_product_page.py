@@ -1,5 +1,6 @@
 from .pages.product_page import ProductPage
 from .pages.login_page import LoginPage
+from  .pages.cart_page import CartPage
 import pytest
 import time
 '''
@@ -41,5 +42,15 @@ def test_guest_cant_see_success_message(browser):
     page = ProductPage(browser, link)
     page.open()
     page.should_not_be_success_message()
+
+
+def test_guest_cant_see_product_in_cart_opened_from_product_page(browser):
+    link = "http://selenium1py.pythonanywhere.com/catalogue/the-city-and-the-stars_95/"
+    page = ProductPage(browser, link)
+    page.open()
+    page.go_to_cart_page()
+    cart_page = CartPage(browser, browser.current_url)
+    cart_page.should_not_be_product_in_cart()
+    cart_page.zero_products_in_cart()
 
 
