@@ -1,6 +1,5 @@
-Selenium-Python-Study-Project
-
-Проект по итогам курса "Автоматизация тестирования с помощью Selenium и Python"
+# Selenium_Python_Study_Project
+Проект по итогам [курса](https://stepik.org/course/575/syllabus) "Автоматизация тестирования с помощью Selenium и Python"
 
 Вы уже знаете практически всю теорию, связанную с паттерном Page Object Model. Как вы могли заметить, особых сложностей там нет.
 
