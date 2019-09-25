@@ -26,6 +26,7 @@ def test_guest_can_add_product_to_cart(browser, link):
     page.test_product_price_in_cart()
 '''
 
+
 def test_guest_cant_see_product_in_cart_opened_from_main_page(browser):
     link = "http://selenium1py.pythonanywhere.com/"
     page = BasePage(browser, link)
@@ -34,6 +35,7 @@ def test_guest_cant_see_product_in_cart_opened_from_main_page(browser):
     cart_page = CartPage(browser, browser.current_url)
     cart_page.should_not_be_product_in_cart()
     cart_page.zero_products_in_cart()
+
 
 @pytest.mark.login_guest
 class TestLoginFromMainPage(object):

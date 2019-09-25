@@ -9,7 +9,7 @@ def pytest_addoption(parser):
     parser.addoption('--browser_name',action='store',default ="chrome", help="Choose browser: chrome or firefox")
     parser.addoption('--languages',action='store',default='en', help="Choose languages for browser")
 
-# Согласно пункту №5 - "Достаточно, чтобы код работал только для браузера Сhrome".r Реализовано, только для браузера Chrome
+# Реализовано, только для браузера Chrome
 @pytest.fixture(scope ="function")
 def browser(request):
     browser_name = request.config.getoption("browser_name")
